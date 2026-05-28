@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: #0A0A0F;
+  color: #F4F4F5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Ambient page background — soft radial glow + faint grid */
+.ambient-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 217, 255, 0.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(167, 139, 250, 0.08), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 10% 60%, rgba(16, 185, 129, 0.05), transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: auto, auto, auto, 40px 40px, 40px 40px;
+}
+
+/* Section divider line */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1F1F26 20%, #1F1F26 80%, transparent);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Custom scrollbar (subtle) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0A0A0F; }
+::-webkit-scrollbar-thumb {
+  background: #27272F;
+  border-radius: 4px;
+  border: 2px solid #0A0A0F;
+}
+::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
