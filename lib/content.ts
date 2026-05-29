@@ -7,23 +7,24 @@
 
 export const hero = {
   pill: 'Open to leadership roles · Toronto, ON',
-  // Headline is two lines for rhythm. Action-verb symmetry (apart / together).
+  // Headline is two warm lines. "Bruno" gets the violet accent, "ten years" gets
+  // the cyan + underline treatment as the single visual moment.
   headline: {
-    line1Prefix: "I've been ",
-    line1Highlight: 'pulling tech apart',
-    line1Suffix: ' since I was seven.',
-    line2Prefix: 'For the last ',
+    line1Prefix: "Hi, I'm ",
+    line1Highlight: 'Bruno',
+    line1Suffix: '.',
+    line2Prefix: 'An engineering leader, ',
     line2HighlightYears: 'ten years',
-    line2Mid: ", I've been getting paid to ",
-    line2HighlightVerb: 'put it back together',
-    line2Suffix: '.',
+    line2Mid: ' in.',
+    line2HighlightVerb: '',
+    line2Suffix: '',
   },
   // Subhead is segmented so "Salvador, Brazil" becomes a LocationTip hover target.
   subhead: {
-    before: "I'm Bruno, an engineering leader in Toronto by way of ",
+    before: 'Based in Toronto, originally from ',
     place: 'Salvador, Brazil',
     after:
-      ". I run quality engineering teams across gaming, fintech, and real estate, and I'm working my way deeper into the management side because that's where the most interesting problems live.",
+      ". I run quality engineering teams across gaming, fintech, and real estate, with one eye on what's next on the management side.",
   },
   signature: '- Bruno Sampaio',
   ctas: [
@@ -44,10 +45,10 @@ export const about = {
   heading:
     "I'm the kid who used to take Super Nintendo controllers apart for fun.",
   paragraphs: [
-    "Seven-year-old me thought there was nothing more interesting than the inside of a Super Nintendo controller. I'd take them apart and put them back together. Half the time they worked better afterward. By the time I was nine, I'd built my first home PC from scavenged parts and learned the hard way which cables go where. I owe most of my career to that small loop of curiosity: open the thing up, figure out who decided where each piece went, and learn how to be one of those people.",
-    "I started getting paid for it a decade ago. The first real job was in a basement office in Salvador, manually testing Brazilian-Portuguese builds of LG mobile phones. Open the menu, tap every button, make sure nothing crashed. Three languages, hundreds of SKUs, the kind of work nobody writes blog posts about. I loved it. There was something honest about being the person who decided whether software was actually ready to ship.",
-    "Ten years later I'm leading quality at Honeywell on a North American real-estate platform serving millions of users. What's stayed constant is the same instinct. Quality is the most under-rated lens on a product. You see things from the QA seat that nobody else does: how design decisions collide with engineering tradeoffs, how a feature looks perfect in a sprint review and falls apart on a real phone, on a real network, in a customer's hand. After enough years, that vantage point becomes a kind of compounding advantage.",
-    "Here's what I've realised though: I don't want to be a QA Lead forever. The work I'm proudest of has always been the work where I stopped being 'the QA person' and started being the engineer-product-translator, the one who could sit with a PM and a senior dev and turn a vague concern into a roadmap people could actually act on. That's the seat I'm building toward. Engineering management, product engineering leadership, anywhere I get to keep the cross-functional view I built in QA but spend more of the day shaping where the team is going next, not just what it ships this sprint.",
+    "I was seven when I started taking apart Super Nintendo controllers. By nine I'd put together my first PC from scavenged parts. Both projects taught me roughly the same thing: someone had decided where every piece went, and I wanted to know how to be one of those people. I've been chasing that ever since.",
+    "My first paid job in tech was at LG in Salvador, manually testing the Brazilian-Portuguese builds of their phones. Three languages, hundreds of SKUs, very little glamour. I liked it. The job was deciding whether the software was actually ready to ship, and that decision mattered.",
+    "Ten years on, I'm leading quality at Honeywell on a real-estate platform with millions of users. The thing I've kept liking about QA is that it gives you the clearest view of how a product actually works: where design decisions clash with engineering reality, where a feature ships clean in staging and breaks on a real device. That view ends up being useful pretty much everywhere.",
+    "I don't want to be a QA Lead forever, though. The work I've been proudest of has been the work where I acted more as a translator: sitting between PM and engineering, turning vague concerns into something the team could act on. I'm looking for that next role now. Engineering management or product engineering leadership, where the cross-functional view I built in QA can shape what we ship next, not just sign off on it.",
   ],
   tags: ['Engineering Management', 'Quality Strategy', 'Cross-functional leadership', 'Mentorship', 'Toronto · open to remote', 'EN · PT · FR'],
 };
@@ -55,19 +56,19 @@ export const about = {
 export const industries = {
   eyebrowNum: '02',
   eyebrow: 'Where I’ve worked',
-  heading: 'Three industries. One operating manual.',
+  heading: 'Three industries, three kinds of stakes.',
   subhead:
-    "I keep gravitating to work where quality has real teeth. Hover the cards on the right to read what each industry taught me.",
+    "I keep ending up in spaces where quality actually matters. Hover any card to read more about each.",
   items: [
     {
       id: 'gaming',
       label: 'Gaming',
       accent: 'violet' as const,
       emoji: '🎮',
-      tagline: 'where I learned to care about feel',
+      tagline: 'live-service titles, player-first quality',
       story: [
-        "Games are the closest you can get to 'users will judge you in five seconds.' At Magic Media I ran an 8-person QA team across Unity and Unreal projects shipping to Sony, Microsoft, Nintendo, Epic, and Steam. At Wildlife Studios before that, I coordinated quality for live mobile games with more than a million MAU.",
-        "What gaming taught me is that quality isn't a checklist. It's a feeling. A frame stutter that doesn't show up in any test plan can be the thing that loses a player forever. We started running QA alongside community managers, not after them, because the people answering Discord at 2am knew what was broken before any dashboard did. That changed how I think about what testing is actually for.",
+        "In games, players decide if they like you in about five seconds. At Magic Media I ran an 8-person QA team across Unity and Unreal projects shipping to Sony, Microsoft, Nintendo, Epic, and Steam. Before that, at Wildlife Studios, I coordinated quality for live mobile games with over a million MAU.",
+        "Gaming taught me quality isn't just a list of bugs found and fixed. A frame stutter that never shows up in a test plan can still be what makes someone quit. We ended up running QA alongside community managers rather than after them; the people answering Discord at 2am usually knew what was broken before our dashboards did.",
       ],
       proof: ['8-person QA team', 'Sony / MS / Nintendo / Epic / Steam', 'Sub-48h sev-1 SLA', '1M+ MAU live ops'],
       companies: 'Magic Media · Wildlife Studios',
@@ -78,10 +79,10 @@ export const industries = {
       label: 'Fintech',
       accent: 'cyan' as const,
       emoji: '🏦',
-      tagline: 'where I learned the consequences',
+      tagline: 'regulated platforms with real consequences',
       story: [
-        "At Cubos Tecnologia in Salvador I led a 12-person team that shipped Brazil's first Open Banking application. Design, engineering, QA, all reporting through me. We were inventing the regulatory pattern in real time while the central bank watched over our shoulder.",
-        "Fintech is the opposite end of the spectrum from gaming. A bad release isn't a refund. It's someone's salary not landing, a transfer that doesn't clear, trust that doesn't come back. That weight reshapes how you think about risk. You stop optimizing for velocity and start optimizing for the long-term cost of being wrong. The Cypress pipeline I built there eventually let us release weekly instead of monthly. Boring infrastructure, but the kind that earns you the right to move fast later.",
+        "At Cubos in Salvador I led a 12-person team that shipped Brazil's first Open Banking application. Design, engineering, and QA all reported through me. The regulatory pattern was being written while we built, with the central bank reviewing as we went.",
+        "Fintech sits at the opposite end of the spectrum from gaming. A bad release isn't a refund; it's someone's salary not landing, a transfer that doesn't clear. That changes how you think about risk: less velocity, more attention to the cost of being wrong. The Cypress pipeline I built there eventually got us from monthly releases to weekly. Quiet infrastructure work that pays off later.",
       ],
       proof: ['12-person team', "Brazil's first Open Banking app", '0% → 88% automation coverage', 'Weekly release cadence'],
       companies: 'Cubos Tecnologia',
@@ -92,10 +93,10 @@ export const industries = {
       label: 'Real Estate',
       accent: 'green' as const,
       emoji: '🏢',
-      tagline: 'where I learned about scale and physics',
+      tagline: 'platform scale with hardware in the loop',
       story: [
-        "Today at Honeywell I lead QA for a North American real-estate platform serving millions of users. Software, but with hardware in the loop. IoT devices in actual buildings, thermostats in basements, sensors that can't be patched over the air the way an app can.",
-        "Hardware adds physics to the equation. You can't ship-and-fix when the bug is in a device that's been mounted on a wall three years ago. That constraint pushes the quality conversation way upstream, into specification, into procurement, into how you design for a system you may not get to touch again. It's been the most operationally serious environment I've worked in, and the place I've grown the most as a leader.",
+        "At Honeywell I lead QA for a North American real-estate platform with millions of users. Software, but with hardware in the loop: IoT devices in real buildings, sensors and thermostats that don't get over-the-air patches the way an app does.",
+        "Hardware changes what 'fixing it' means. You can't ship-and-patch when the bug is in a device installed three years ago. That pushes quality upstream: into the spec, into procurement, into how you design something you may not be able to touch again. It's the most operationally serious work I've done.",
       ],
       proof: ['Millions of platform users', 'Mobile + IoT scope', '30+ API issues caught via load testing', 'Cross-functional with PM + eng leadership'],
       companies: 'Honeywell',
@@ -109,7 +110,7 @@ export const projects = {
   eyebrow: 'Projects',
   heading: "Some of what I've shipped.",
   subhead:
-    "A non-exhaustive tour, in roughly reverse-chronological order. Real-estate platforms, mobile games people actually play, and the fintech work that taught me what 'serious' really means.",
+    "A non-exhaustive tour, in roughly reverse-chronological order. Real-estate platforms, mobile games with sizeable playerbases, and a few fintech projects.",
   items: [
     {
       id: 'brokerbay',
@@ -120,7 +121,7 @@ export const projects = {
       emoji: '🏢',
       kicker: 'REAL ESTATE',
       description:
-        "BrokerBay is the showing management platform real estate brokerages use to coordinate listings, lockbox access, and the messy logistics of getting buyers into homes. I lead QA across mobile and the connected IoT lockbox side, on weekly release cycles. The kind of platform where a regression doesn't just block one transaction, it blocks thousands. Officially renamed Supra One in early 2026, still the same product underneath.",
+        "BrokerBay is the showing management platform real estate brokerages use to coordinate listings, lockbox access, and the logistics of getting buyers into homes. I lead QA across mobile and the connected IoT lockbox side, on weekly release cycles. A regression here doesn't block one transaction; it blocks thousands. Officially renamed Supra One in early 2026.",
       image: '/projects/brokerbay.jpg',
       video: '/projects/brokerbay.mp4',
       links: [
@@ -137,7 +138,7 @@ export const projects = {
       emoji: '🎮',
       kicker: 'GAMING',
       description:
-        "Godforge is the cross-platform hero-collector RPG Fateless Games has been building. Community-first, 250+ collectible heroes, $22M raised across two rounds, now in Beta with 100K players. I came in during the early concept and prototype phases as QA Lead, setting up the test strategy from scratch and mentoring the in-house testing team. The kind of engagement where you're shaping how the studio will think about quality before there's a 'game' to test yet.",
+        "Godforge is the cross-platform hero-collector RPG Fateless Games has been building. Community-first, 250+ collectible heroes, $22M raised across two rounds, now in Beta with 100K players. I came in during early concept and prototype as QA Lead, setting up the test strategy from scratch and mentoring the in-house testing team. Most of the work was shaping how a new studio thinks about quality before there's much to test.",
       image: '/projects/godforge.jpg',
       video: '/projects/godforge.mp4',
       links: [
@@ -154,7 +155,7 @@ export const projects = {
       emoji: '🎮',
       kicker: 'GAMING',
       description:
-        "A 3D action-adventure based on Go Nagai's classic Grendizer anime, published by Microids with Magic Media on production. I owned QA across multiple gameplay modes: mech combat, vertical shoot-em-up sections, and the Spazer flying-module flow. Shipped to Steam and consoles. Currently sitting at 84% positive on Steam, which is the kind of number that makes you sleep well after a licensed anime release.",
+        "A 3D action-adventure based on Go Nagai's Grendizer anime, published by Microids with Magic Media on production. I owned QA across the major gameplay modes: mech combat, vertical shoot-em-up sections, and the Spazer flying-module flow. Shipped to Steam and consoles. Sits at 84% positive on Steam, which is a solid landing for a licensed anime title.",
       image: '/projects/grendizer.jpg',
       video: '/projects/grendizer.mp4',
       links: [
@@ -170,7 +171,7 @@ export const projects = {
       emoji: '🏦',
       kicker: 'FINTECH',
       description:
-        "Marlim is a Brazilian payments platform that built the first installment credit-card and PIX rails for the currency-exchange market. I worked on the engineering side at Cubos. Clients included Nomad, Foxbit, and Western Union, with total payment volume growing from R$2M to R$60M+ during the work. The kind of fintech project where 'small bug' and 'lost transaction' mean the same thing.",
+        "Marlim is a Brazilian payments platform that built the first installment credit-card and PIX rails for the currency-exchange market. I worked on the engineering side at Cubos. Clients included Nomad, Foxbit, and Western Union, with total payment volume growing from R$2M to over R$60M during my time on it.",
       image: '/projects/marlim.jpg',
       links: [
         { label: 'marlim.co', href: 'https://marlim.co/', icon: '↗' },
@@ -185,7 +186,7 @@ export const projects = {
       emoji: '🎮',
       kicker: 'GAMING',
       description:
-        "Wildlife's social-deduction game. Think Among Us but with built-in voice chat from day one. I coordinated QA during the prototype-to-live transition. The voice chat was the hardest part: testing nine real humans yelling at each other in a stable session on iOS and Android while the round timer ticks down is its own form of QA art.",
+        "Wildlife's social-deduction game; closest comparison is Among Us, but with voice chat built in from day one. I coordinated QA during the prototype-to-live transition. The voice chat layer was the hardest part of the job: keeping nine players in a stable cross-platform session while a round timer is running is a hard test to design.",
       image: '/projects/suspects.jpg',
       video: '/projects/suspects.mp4',
       links: [
@@ -203,7 +204,7 @@ export const projects = {
       emoji: '🎮',
       kicker: 'GAMING',
       description:
-        "Wildlife's flagship mobile sports game. Real-time multiplayer tennis with quick rallies built to fit between subway stops. 160M+ downloads, 4.6 stars. I coordinated QA across live events, seasonal content, and the matchmaking layer. Real-time multiplayer at this scale is unforgiving, and that's the whole reason it's worth doing.",
+        "Wildlife's flagship mobile sports game: real-time multiplayer tennis with short rallies designed for quick mobile sessions. 160M+ downloads, 4.6 stars. I coordinated QA across live events, seasonal content, and the matchmaking layer. Real-time multiplayer at that scale doesn't leave much room for error.",
       image: '/projects/tennis-clash.jpg',
       video: '/projects/tennis-clash.mp4',
       links: [
@@ -221,7 +222,7 @@ export const projects = {
       emoji: '🎮',
       kicker: 'GAMING',
       description:
-        "Wildlife's mobile battle royale with zoo animals. A genre mashup (BR meets MOBA) that genuinely worked: 25M+ downloads, 20+ characters with distinct kits. I coordinated QA during peak live-ops and ran regression on new character launches. Same uptime expectations as the rest of the portfolio, with the bonus of fighting through visible bugs in a moving CGI giraffe.",
+        "Wildlife's mobile battle royale with zoo animals; a Battle Royale / MOBA mashup that did surprisingly well: 25M+ downloads, 20+ characters with distinct kits. I coordinated QA during peak live-ops and ran regression on new character launches. Same uptime bar as the rest of the portfolio.",
       image: '/projects/zooba.jpg',
       video: '/projects/zooba.mp4',
       links: [
@@ -239,7 +240,7 @@ export const projects = {
       emoji: '🏦',
       kicker: 'FINTECH',
       description:
-        "Brazil's first Open Banking application. Web in React, native Android in Kotlin, native iOS in Swift, all shipped before the regulatory pattern was even settled. I led a 12-person team across design, engineering, and QA, and stood up the Cypress pipeline that took us from monthly releases to weekly. The central bank was watching over our shoulder while we shipped the spec in real time.",
+        "Brazil's first Open Banking application. Web in React, native Android in Kotlin, native iOS in Swift; all shipped before the regulatory spec was fully settled. I led a 12-person team across design, engineering, and QA, and built the Cypress pipeline that took us from monthly releases to weekly. The central bank reviewed every step.",
       image: '/projects/bbnk.jpg',
       links: [
         { label: 'Cubos case study', href: 'https://cases.cubos.io/case-bbnk.html', icon: '↗' },
@@ -253,7 +254,7 @@ export const contact = {
   eyebrow: 'Contact',
   heading: "Let's talk.",
   subhead:
-    "I'm open to engineering management, quality leadership, and senior product roles, especially in gaming, fintech, or real-estate tech. Toronto-based, open to remote. The fastest way to get me is email; happy to hop on a call from there.",
+    "I'm open to engineering management, quality leadership, and senior product roles, especially in gaming, fintech, or real-estate tech. Toronto-based, open to remote. Email is the fastest way to reach me.",
   cards: [
     {
       label: 'Email',
